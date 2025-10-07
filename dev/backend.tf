@@ -4,6 +4,6 @@ terraform {
     key            = "dev/terraform.state"
     bucket         = "class39-terraform-backend-bucket"
     region         = "us-east-2"
-    dynamodb_table = "terraform-state-locking"
+    dynamodb_table = "terraform-state-locking-v2"
   }
 }
