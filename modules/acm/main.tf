@@ -12,7 +12,7 @@ resource "aws_acm_certificate" "cloudysoft1_cert" {
   }
 }
 
-resource "aws_route53_record" "cert_validation" {
+resource "aws_route53_record" "cert_validation-cloudysoft" {
   for_each = {
     for dvo in aws_acm_certificate.cloudysoft1_cert.domain_validation_options :
     dvo.domain_name => {
