@@ -67,13 +67,13 @@ variable "key_name" {
 variable "domain_name" {
   description = "Primary domain name for the certificate"
   type        = string
-  default     = "fusisoft.org"
+  default     = "cloudysoft1.com"
 }
 
 variable "san_domains" {
   description = "Subject alternative names for the certificate"
   type        = list(string)
-  default     = ["*.fusisoft.org"]
+  default     = ["*.cloudysoft1.com"]
 }
 
 variable "route53_zone_id" {
