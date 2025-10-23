@@ -133,6 +133,16 @@ resource "aws_iam_policy" "github_eks_policy" {
     "logs:DescribeLogGroups"
   ],
   "Resource": "*"
+},
+{
+  "Effect": "Allow",
+  "Action": [
+    "acm:RequestCertificate",
+    "ecr:CreateRepository",
+    "kms:CreateKey",
+    "logs:CreateLogGroup"
+  ],
+  "Resource": "*"
 }
     ]
   })
