@@ -75,7 +75,7 @@ variable "instance_type" {
 variable "key_name" {
   description = "EC2 Key Pair name for SSH access"
   type        = string
-  default     = "class39-dominion"
+  default     = "class39key"
 }
 
 ################################################################################
@@ -107,7 +107,7 @@ variable "route53_zone_id" {
 variable "repositories" {
   description = "List of ECR repositories to create"
   type        = list(string)
-  default     = ["fintech-app","gateway"]
+  default     = ["fintech-app", "gateway"]
 }
 
 ################################################################################

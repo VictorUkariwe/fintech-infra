@@ -60,7 +60,7 @@ variable "instance_type" {
 variable "key_name" {
   description = "The key name for the instance"
   type        = string
-  default     = "class38_demo_key"
+  default     = "class39key"
 }
 
 #Amazon Certificate Manager

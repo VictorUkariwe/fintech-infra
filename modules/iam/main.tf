@@ -49,8 +49,8 @@ resource "aws_iam_policy" "github_ecr_policy" {
     Version = "2012-10-17"
     Statement = [
       {
-        Effect = "Allow"
-        Action = "ecr:GetAuthorizationToken"
+        Effect   = "Allow"
+        Action   = "ecr:GetAuthorizationToken"
         Resource = "*"
       },
       {
@@ -77,8 +77,8 @@ resource "aws_iam_policy" "github_ecr_policy" {
         Resource = "arn:aws:ecr:${var.aws_region}:${var.aws_account_id}:*"
       },
       {
-        Effect = "Allow"
-        Action = "sts:TagSession"
+        Effect   = "Allow"
+        Action   = "sts:TagSession"
         Resource = "*"
       }
     ]
@@ -107,7 +107,33 @@ resource "aws_iam_policy" "github_eks_policy" {
           "ssm:GetParameter"
         ]
         Resource = "*"
-      }
+      },
+      {
+         "Effect": "Allow",
+        "Action": [
+    "acm:RequestCertificate",
+    "acm:DescribeCertificate",
+    "acm:ListCertificates",
+    "acm:DeleteCertificate"
+  ],
+  "Resource": "*"
+},
+{
+  "Effect": "Allow",
+  "Action": [
+    "ecr:CreateRepository",
+    "ecr:DescribeRepositories"
+  ],
+  "Resource": "*"
+},
+{
+  "Effect": "Allow",
+  "Action": [
+    "logs:CreateLogGroup",
+    "logs:DescribeLogGroups"
+  ],
+  "Resource": "*"
+}
     ]
   })
 }

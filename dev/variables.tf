@@ -34,7 +34,7 @@ variable "tags" {
   description = "Common tags for all resources"
   type        = map(string)
   default = {
-    devuct   = "fintech-app"
+    devuct    = "fintech-app"
     ManagedBy = "terraform"
   }
 }
@@ -75,7 +75,7 @@ variable "instance_type" {
 variable "key_name" {
   description = "EC2 Key Pair name for SSH access"
   type        = string
-  default     = "class39-dominion"
+  default     = "class39key"
 }
 
 ################################################################################
