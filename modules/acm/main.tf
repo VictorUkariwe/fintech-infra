@@ -35,5 +35,5 @@ resource "aws_route53_record" "cert_validation-cloudysoft" {
 
 resource "aws_acm_certificate_validation" "cert" {
   certificate_arn         = aws_acm_certificate.cloudysoft1_cert.arn
-  validation_record_fqdns = [for record in aws_route53_record.cert_validation : record.fqdn]
+  validation_record_fqdns = [for record in aws_route53_record.cert_validation-cloudysoft : record.fqdn]
 }
