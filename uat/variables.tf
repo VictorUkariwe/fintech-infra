@@ -60,7 +60,7 @@ variable "instance_type" {
 variable "key_name" {
   description = "The key name for the instance"
   type        = string
-  default     = "class39key"
+  default     = "cloudysoft"
 }
 
 #Amazon Certificate Manager
